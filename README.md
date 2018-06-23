@@ -11,4 +11,3 @@
   - 리액트 네이티브의 디자인은 flexbox로 가능
 - React Native Layouts with Flexbox
   - Html, css의 경우 디폴트 flex direction은 row / React Native의 경우 column (대부분의 앱의 column 방향이기 때문에)
-  - 

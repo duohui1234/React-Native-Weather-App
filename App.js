@@ -1,13 +1,28 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import Weather from './Weather'; 
-import {Ionicons} from '@expo/vector-icons';
+
 
 export default class App extends Component {
   state = {
     //data api를 불러오면 isLoaded 값은 true로 변하게, 로딩 중에는 false
-    isLoaded: true
+    isLoaded: false
   };
+
+  componentDidMount(){
+    // 위치 정보를 제대로 불러온다면 isLoaded를 true로
+    navigator.geolocation.getCurrentPosition(position => {
+      this.setState({
+        isLoaded: true
+      }); 
+    },
+     error => {
+       console.log(error);
+     }
+
+  );
+  }
+
   render() {
     const {isLoaded} = this.state;
     return (

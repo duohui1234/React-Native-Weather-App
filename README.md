@@ -25,4 +25,14 @@
     <Ionicons color = 'white' size = {144} name = 'ios-rainy'/>
     ~~~
 
-    
+- ComponentDidMount
+
+  ~~~jsx
+  componentDidMount(){
+      console.log("componentDidMount");
+  }
+  ~~~
+
+  - 컴포넌트가 만들어지고 첫 렌더링을 다 마친 후 실행되는 메소드.
+  - setTimeout, AJAX 처리등을 넣음.
+  - 위치정보를 불러오는데 성공했을 경우에 위치 값을 날씨 API에 넘겨주도록 한다.

@@ -9,4 +9,6 @@
     - ex. view 컴포넌트를 이용하면 ios/android 환경에 따라 objective-c 혹은 java로 변함
   - [React Native Component Document](https://facebook.github.io/react-native/docs/getting-started.html)
   - 리액트 네이티브의 디자인은 flexbox로 가능
-
+- React Native Layouts with Flexbox
+  - Html, css의 경우 디폴트 flex direction은 row / React Native의 경우 column (대부분의 앱의 column 방향이기 때문에)
+  - 

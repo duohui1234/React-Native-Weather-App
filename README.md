@@ -15,15 +15,13 @@
 
   - html, css의 경우 디폴트 flex direction은 row / React Native의 경우 column (대부분의 앱의 column 방향이기 때문에)
 
-- [Vector-icons](https://expo.github.io/vector-icons/)
+- [expo의 아이콘 관련 패키지, Vector-icons](https://expo.github.io/vector-icons/)
 
-  - expo의 아이콘 관련 패키지
-
-    ~~~jsx
-    import {Ionicons} from '@expo/vector-icons'; 
-    
-    <Ionicons color = 'white' size = {144} name = 'ios-rainy'/>
-    ~~~
+  ~~~jsx
+  import {Ionicons} from '@expo/vector-icons'; 
+  
+  <Ionicons color = 'white' size = {144} name = 'ios-rainy'/>
+  ~~~
 
 - ComponentDidMount
 

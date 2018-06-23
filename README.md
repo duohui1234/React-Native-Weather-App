@@ -13,7 +13,7 @@
 
 - React Native Layouts with Flexbox
 
-  - Html, css의 경우 디폴트 flex direction은 row / React Native의 경우 column (대부분의 앱의 column 방향이기 때문에)
+  - html, css의 경우 디폴트 flex direction은 row / React Native의 경우 column (대부분의 앱의 column 방향이기 때문에)
 
 - [Vector-icons](https://expo.github.io/vector-icons/)
 
@@ -25,4 +25,4 @@
     <Ionicons color = 'white' size = {144} name = 'ios-rainy'/>
     ~~~
 
-  - 
+    

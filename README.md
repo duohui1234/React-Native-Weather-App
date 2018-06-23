@@ -35,4 +35,13 @@
   - setTimeout, AJAX 처리등을 넣음.
   - 위치정보를 불러오는데 성공했을 경우에 위치 값을 날씨 API에 넘겨주도록 한다.
 
-- 
+- fetch-then
+
+  - [MDN Web Docs](https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Fetch%EC%9D%98_%EC%82%AC%EC%9A%A9%EB%B2%95)
+
+- [날씨 api](https://www.openweathermap.org/)
+
+  - `api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}`
+
+  
+

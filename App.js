@@ -6,32 +6,38 @@ import Weather from './Weather';
 export default class App extends Component {
   state = {
     //data api를 불러오면 isLoaded 값은 true로 변하게, 로딩 중에는 false
-    isLoaded: false
+    isLoaded: false,
+    error: null
   };
 
   componentDidMount(){
-    // 위치 정보를 제대로 불러온다면 isLoaded를 true로
     navigator.geolocation.getCurrentPosition(position => {
       this.setState({
-        isLoaded: true
+        isLoaded : true
       }); 
     },
      error => {
-       console.log(error);
+       this.setState({
+           error: error
+       });
      }
 
   );
   }
 
   render() {
-    const {isLoaded} = this.state;
+    const {isLoaded, error} = this.state;
     return (
       <View style={styles.container}>
 
          {/* barStyle = "dark-content" / hidden = "true" */}
         <StatusBar barStyle = "light-content"/>
-          {/* 로딩 성공하면 그값을, 로딩중이면 로딩 페이지를 보여줌 */}
-         {isLoaded ? <Weather/ > : <View style={styles.loading}><Text style={styles.loadingText}>Getting the fucking weather</Text></View>}
+          {/* 로딩 성공하면 날씨를, 로딩중이면 로딩 페이지를 보여줌 */}
+         {isLoaded ? (<Weather/ >) :( 
+         <View style={styles.loading}>
+         <Text style={styles.loadingText}>Getting the fucking weather</Text>
+         {error? <Text style={styles.errorText}>{error}</Text>:null}
+         </View>)}
       </View>
     );
   }
@@ -41,6 +47,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff'
+  },
+  errorText: {
+   color: 'red',
+   backgroundColor: 'transparent',
+   marginBottom : 40
   },
   loading: {
      flex : 1,
